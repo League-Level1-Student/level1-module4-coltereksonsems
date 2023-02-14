@@ -10,12 +10,11 @@ public class ChuckleClicker implements ActionListener {
 	public static void main(String[] args) {
 new ChuckleClicker().makeButtons();
 	}
-
+	JButton Button1 = new JButton("Joke");
+	JButton Button2 = new JButton("Punchline");
 	void makeButtons() {
 
 		JFrame frame = new JFrame();
-		JButton Button1 = new JButton("Joke");
-		JButton Button2 = new JButton("Punchline");
 		JPanel Panel = new JPanel();
 		
 		frame.add (Panel);
@@ -25,17 +24,14 @@ new ChuckleClicker().makeButtons();
 		frame.pack();
 		Button1.addActionListener(this);
 		Button2.addActionListener(this);
-		// Were you typing on the Zoom?
-		// yes, I don't know why they don't go through. I've been trying to get a mic so
-		// this hoepgully won't happen. But what i was typing was I need help with
-		// adding a Jbutton and Jpanel to the JFrame
-		// oh okay well for any swing stuff you can look back at your old cold
-	} // yes
-
+	
+	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+		if(arg0.getSource() == Button1) {
+			
+		}
 	}
 }
 
