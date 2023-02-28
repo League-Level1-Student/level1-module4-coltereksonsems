@@ -2,6 +2,7 @@ package _01_chuckle_clicker;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import java.awt.event.ActionEvent;
@@ -30,7 +31,11 @@ new ChuckleClicker().makeButtons();
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource() == Button1) {
-			
+			JOptionPane.showMessageDialog(null, "Hi");}
+			if(arg0.getSource() == Button2) {
+				JOptionPane.showMessageDialog(null, "Hi");
+			}
+
 		}
 	}
 }
