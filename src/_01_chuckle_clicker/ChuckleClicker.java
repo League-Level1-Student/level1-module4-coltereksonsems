@@ -31,14 +31,14 @@ new ChuckleClicker().makeButtons();
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource() == Button1) {
-			JOptionPane.showMessageDialog(null, "Hi");}
-			if(arg0.getSource() == Button2) {
-				JOptionPane.showMessageDialog(null, "Hi");
+		JOptionPane.showMessageDialog(null, "What's the coldest country in the world?");
+		}if(arg0.getSource() == Button2) {
+				JOptionPane.showMessageDialog(null, "Chile");
 			}
 
 		}
 	}
-}
+
 
 
 	 
