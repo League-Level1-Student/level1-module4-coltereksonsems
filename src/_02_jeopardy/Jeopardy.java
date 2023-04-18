@@ -107,10 +107,10 @@ public class Jeopardy implements ActionListener {
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
 if (buttonPressed.equals(firstButton)){
-	askQuestion("What year did Idora Park in Youngstown Ohio Close","1984","25$");
+	askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
 }
 			// Call the askQuestion() method
- askQuestion();
+// askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
 		// Complete the code in the askQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
@@ -125,15 +125,16 @@ if (buttonPressed.equals(firstButton)){
 
 		// Use the playJeopardyTheme() method to play music while the use thinks of an
 		// answer
-
+playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user
 		// the question
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
+	String userAnswer =	JOptionPane.showInputDialog(question);
 
 		// Stop the theme music when they have entered their response.
-
+stopJeopardyTheme();
 		// If the answer is correct
-
+if (userAnswer .equals (correctAnswer)) {score+=prizeMoney;}{JOptionPane.showMessageDialog(null, "Correct!");} 
+else {score-=prizeMoney;}{JOptionPane.showMessageDialog(null, "Incorrect!");}
 		// Increase the score by the prizeMoney
 
 		// Pop up a message to tell the user they were correct
