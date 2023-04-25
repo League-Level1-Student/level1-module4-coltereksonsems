@@ -99,42 +99,48 @@ public class Jeopardy implements ActionListener {
 	}
 
 	@Override
-    public void actionPerformed(ActionEvent e) {
-		
+	public void actionPerformed(ActionEvent e) {
+
 		// Remove this temporary message after testing:
-		
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-if (buttonPressed.equals(firstButton)){
-	askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
-}
-			// Call the askQuestion() method
-// askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
-		// Complete the code in the askQuestion() method. When you play the game, the score should change.
+		if (buttonPressed.equals(firstButton)) {
+			askQuestion("What year did Idora Park in Youngstown Ohio Close", "1984", 25);
+		}
+		// Call the askQuestion() method
+		// askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
+		// Complete the code in the askQuestion() method. When you play the game, the
+		// score should change.
 
 		// If the buttonPressed was the secondButton
+if (buttonPressed == secondButton){askQuestion("What was the name of the amusement park in Holyoke Mass. that operated from 1894-1987?","Mountain Park", 50);}
+		// Call the askQuestion() method with a harder question
 
-			// Call the askQuestion() method with a harder question
-
-		// Clear the text on the button that was pressed (set the button text to nothing)
-
+		// Clear the text on the button that was pressed (set the button text to
+		// nothing)
+secondButton.setText(null);
 	}
 
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
 
 		// Use the playJeopardyTheme() method to play music while the use thinks of an
 		// answer
-playJeopardyTheme();
+		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user
 		// the question
-	String userAnswer =	JOptionPane.showInputDialog(question);
+		String userAnswer = JOptionPane.showInputDialog(question);
 
 		// Stop the theme music when they have entered their response.
-stopJeopardyTheme();
+		stopJeopardyTheme();
 		// If the answer is correct
-if (userAnswer .equals (correctAnswer)) {score+=prizeMoney;}{JOptionPane.showMessageDialog(null, "Correct!");} 
-else {score-=prizeMoney;}{JOptionPane.showMessageDialog(null, "Incorrect!");}
+		if (userAnswer.equals(correctAnswer)) {
+			score += prizeMoney;
+			JOptionPane.showMessageDialog(null, "Correct!");
+		} else {
+			score -= prizeMoney;
+			JOptionPane.showMessageDialog(null, "Incorrect.");
+		}
 		// Increase the score by the prizeMoney
 
 		// Pop up a message to tell the user they were correct
