@@ -67,8 +67,8 @@ public class Jeopardy implements ActionListener {
 		// 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
-		firstButton.addActionListener(null);
-		secondButton.addActionListener(null);
+		firstButton.addActionListener(this);
+		secondButton.addActionListener(this);
 		// 12. Write the code to complete the actionPerformed() method below
 
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
@@ -104,6 +104,7 @@ public class Jeopardy implements ActionListener {
 		// Remove this temporary message after testing:
 
 		JButton buttonPressed = (JButton) e.getSource();
+		System.out.println("action");
 		// If the buttonPressed was the firstButton
 		if (buttonPressed.equals(firstButton)) {
 			askQuestion("What year did Idora Park in Youngstown Ohio Close", "1984", 25);
@@ -126,13 +127,13 @@ secondButton.setText(null);
 
 		// Use the playJeopardyTheme() method to play music while the use thinks of an
 		// answer
-		playJeopardyTheme();
+		// playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user
 		// the question
 		String userAnswer = JOptionPane.showInputDialog(question);
 
 		// Stop the theme music when they have entered their response.
-		stopJeopardyTheme();
+		// stopJeopardyTheme();
 		// If the answer is correct
 		if (userAnswer.equals(correctAnswer)) {
 			score += prizeMoney;
@@ -141,6 +142,7 @@ secondButton.setText(null);
 			score -= prizeMoney;
 			JOptionPane.showMessageDialog(null, "Incorrect.");
 		}
+		updateScore();
 		// Increase the score by the prizeMoney
 
 		// Pop up a message to tell the user they were correct
