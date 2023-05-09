@@ -30,7 +30,7 @@ import game_tools.Sound;
 public class Jeopardy implements ActionListener {
 	private JButton firstButton;
 	private JButton secondButton;
-	private JButton thirdButton, fourthButton;
+	private JButton thirdButton, fourthButton; fifthButton; sixthButton;
 	private JPanel quizPanel;
 	private int score = 0;
 	private JLabel scoreBox = new JLabel("0");
@@ -63,7 +63,11 @@ public class Jeopardy implements ActionListener {
 
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
-		secondButton = createButton("25$");
+		secondButton = createButton("200$");
+		thirdButton = createButton("400$");
+		fourthButton = createButton("600$");
+		fifthButton = createButton("800$");
+		sixthButton = createButton("1000$");
 		// 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
