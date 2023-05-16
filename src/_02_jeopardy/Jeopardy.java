@@ -30,7 +30,7 @@ import game_tools.Sound;
 public class Jeopardy implements ActionListener {
 	private JButton firstButton;
 	private JButton secondButton;
-	private JButton thirdButton, fourthButton; fifthButton; sixthButton;
+	private JButton thirdButton, fourthButton, fifthButton, sixthButton;
 	private JPanel quizPanel;
 	private int score = 0;
 	private JLabel scoreBox = new JLabel("0");
@@ -70,6 +70,10 @@ public class Jeopardy implements ActionListener {
 		sixthButton = createButton("1000$");
 		// 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
+		quizPanel.add(thirdButton);
+		quizPanel.add(fourthButton);
+		quizPanel.add(fifthButton);
+		quizPanel.add(sixthButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
 		firstButton.addActionListener(this);
 		secondButton.addActionListener(this);
@@ -113,14 +117,18 @@ public class Jeopardy implements ActionListener {
 		if (buttonPressed.equals(firstButton)) {
 			askQuestion("What year did Idora Park in Youngstown Ohio Close", "1984", 25);
 		}
+		if (buttonPressed.equals(thirdButton)) {
+			askQuestion("What is the name of the popular callopie tune usually associated with clowns?", "Enterance of the gladiators", 75);
+		}
 		// Call the askQuestion() method
 		// askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
 		// Complete the code in the askQuestion() method. When you play the game, the
 		// score should change.
 
 		// If the buttonPressed was the secondButton
-if (buttonPressed == secondButton){askQuestion("What was the name of the amusement park in Holyoke Mass. that operated from 1894-1987?","Mountain Park", 50);}
+if (buttonPressed == secondButton){askQuestion("What was the name of the amusement park in Holyoke Mass. that operated from 1894-1987?","mountain park", 50);}
 		// Call the askQuestion() method with a harder question
+
 
 		// Clear the text on the button that was pressed (set the button text to
 		// nothing)
