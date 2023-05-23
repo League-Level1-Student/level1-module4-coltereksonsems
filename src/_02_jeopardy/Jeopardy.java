@@ -116,9 +116,14 @@ public class Jeopardy implements ActionListener {
 		// If the buttonPressed was the firstButton
 		if (buttonPressed.equals(firstButton)) {
 			askQuestion("What year did Idora Park in Youngstown Ohio Close", "1984", 25);
+			firstButton.setText("");
+			firstButton.removeActionListener(this);
 		}
 		if (buttonPressed.equals(thirdButton)) {
-			askQuestion("What is the name of the popular callopie tune usually associated with clowns?", "Enterance of the gladiators", 75);
+			askQuestion("What is the name of the popular callopie tune usually associated with clowns?",
+					"Enterance of the gladiators", 75);
+			thirdButton.setText("");
+			thirdButton.removeActionListener(this);
 		}
 		// Call the askQuestion() method
 		// askQuestion("What year did Idora Park in Youngstown Ohio Close","1984",25);
@@ -126,13 +131,18 @@ public class Jeopardy implements ActionListener {
 		// score should change.
 
 		// If the buttonPressed was the secondButton
-if (buttonPressed == secondButton){askQuestion("What was the name of the amusement park in Holyoke Mass. that operated from 1894-1987?","mountain park", 50);}
+		if (buttonPressed == secondButton) {
+			askQuestion("What was the name of the amusement park in Holyoke Mass. that operated from 1894-1987?",
+					"mountain park", 50);
+			secondButton.setText("");
+			secondButton.removeActionListener(this);
+			
+		}
 		// Call the askQuestion() method with a harder question
-
 
 		// Clear the text on the button that was pressed (set the button text to
 		// nothing)
-secondButton.setText(null);
+		
 	}
 
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
