@@ -10,6 +10,7 @@ public class typingclass {
 	char generateRandomLetter() {
 	    Random r = new Random();
 	    return (char) (r.nextInt(26) + 'a');
+	    currentLetter = generateRandomLetter();
 	}
 
 JFrame frame = new JFrame();
@@ -19,6 +20,10 @@ char currentLetter;
 void setup(){
 	frame.setVisible(true);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+	JLabel label = new JLabel(currentLetter);
+	label.setFont(label.getFont().deriveFont(28.0f));
+	label.setHorizontalAlignment(JLabel.CENTER);
 }
 
 
