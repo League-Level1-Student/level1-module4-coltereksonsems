@@ -26,7 +26,10 @@ public class typingclass {
 		JLabel label = new JLabel(currentLetter+"");
 		label.setFont(label.getFont().deriveFont(28.0f));
 		label.setHorizontalAlignment(JLabel.CENTER);
-	frame.add(keyListener)
+	frame.add(keyListener);
+	panel.add(label);
+	panel.add(frame);
+	panel.pack();
 	}
 }
 
